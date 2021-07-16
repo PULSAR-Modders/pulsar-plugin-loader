@@ -23,21 +23,7 @@ Injects a basic plugin loader into [*PULSAR: Lost Colony*][10].
 
 ## Usage
 
-```
-.\PulsarPluginBootstrapper.exe [Path\To\Pulsar\PULSAR_LostColony_Data\Managed\Assembly-CSharp.dll]
-```
-
-By default, PPL will attempt to patch the Steam version of the game in Steam's default install location.  To patch a PULSAR installation in another location (non-Steam version, copy of client, etc), simply specify the path to `Assembly-CSharp.dll` as shown above.
-
-Afterwards, add plugins to then `PULSAR_LostColony_Data\Managed\Plugins` directory, then run PULSAR normally.  `PulsarPluginLoader.exe` is no longer necessary.
-
-### Removal
-
-Use Steam's `Verify Integrity of Game Files` option to restore any modified files with minimal download.
-
-Non-Steam users can attempt to rename `Assembly-CSharp.dll.bak` to `Assembly-CSharp.dll`, assuming no official patches were released since it was last generated.  Otherwise, restore a clean copy from the official non-Steam download.
-
-Optionally remove `PulsarPluginLoader.dll`, `Assembly-CSharp.dll.bak`, and the `Plugins` directory from `PULSARLostColony\PULSAR_LostColony_Data\Managed`
+Copy all the files from the archive to the root folder with the game and just start the game.
 
 ## Creating Plugins
 
@@ -110,4 +96,4 @@ namespace ExamplePlugin
 }
 ```
 
-Distribute plugins as `.dll` assemblies.  To install, simply drop the assembly into the `Managed\Plugins` folder; any properly-defined `*.dll` plugin assemblies are automatically loaded.
+Distribute plugins as `.dll` assemblies.  To install, simply drop the assembly into the `Steam\steamapps\common\PULSARLostColony\Mods` folder; any properly-defined `*.dll` plugin assemblies are automatically loaded.
